@@ -1,8 +1,12 @@
 import React from "react";
+import {ThemeContext} from "../context/ThemeContext";
 
 class Banner extends React.Component {
+
+  static contextType = ThemeContext;
   render() {
-    let { isDarkMode } = this.props;
+  
+    let {isDarkMode} = this.context.data;
     return (
       <div
         className={

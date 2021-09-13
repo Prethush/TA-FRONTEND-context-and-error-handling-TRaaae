@@ -1,4 +1,9 @@
-function Card({ isDarkMode }) {
+import {useContext} from "react";
+import { ThemeContext } from "../context/ThemeContext";
+
+function Card() {
+  let theme = useContext(ThemeContext);
+  let isDarkMode = theme.data.isDarkMode;
   return (
     <div className="card_item">
       <div className={isDarkMode ? "card_inner_dark" : "card_inner_light"}>

@@ -1,4 +1,10 @@
-function Title({ text, isDarkMode }) {
+import {useContext} from "react";
+import { ThemeContext } from "../context/ThemeContext";
+
+function Title({ text}) {
+
+  let theme = useContext(ThemeContext);
+  let isDarkMode = theme.data.isDarkMode;
   return (
     <h2
       className={`heading ${
